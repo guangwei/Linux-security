@@ -1,0 +1,35 @@
+https://developers.google.com/speed/webp/docs/precompiled
+
+
+cwebp encodes images in either JPEG, PNG or TIFF format into WebP, while dwebp decodes them back into PNG. For a quick and easy way to get started converting your images, the following archives are available on the downloads repository.
+
+libwebp-0.6.0-windows-x86.zip : 32-bit executables and libraries for Windows-x86 platform.
+libwebp-0.6.0-windows-x64.zip : 64-bit executables and libraries for Windows-x64 platform.
+libwebp-0.6.0-linux-x86-32.tar.gz : 32-bit executables and libraries for GNU/Linux-x86 platform.
+libwebp-0.6.0-linux-x86-64.tar.gz : 64-bit executables and libraries for GNU/Linux-x86_64 platform.
+libwebp-0.6.0-mac-10.9.tar.gz : 64-bit executables and libraries for Mac OS X 10.9 (Mountain Lion) platform.
+All these archives contain both the cwebp and dwebp precompiled executables, along with the libwebp.a library and C headers (the latter allowing you to add WebP encoding or decoding to your own programs).
+
+Note (for Linux and Mac OS X):
+
+The 32 and 64-bit GNU/Linux binaries have been dynamically linked to the jpeg, png and tiff libraries. These libraries should be available on your system. However, if starting the binaries prints an error about the availability of libpng, libjpeg or libtiff, check the section Preparing the Platform on this page for installing them on your system.
+Conversely, the libpng, libjpeg and libtiff libraries have been statically linked in the Mac OS X binaries. They do not require additional installation.
+Installing cwebp and dwebp on OS X with MacPorts
+
+An easy way to build and install the encoder and decoder on Mac OS X is by using MacPorts.
+
+If you already have MacPorts installed, go directly to Step 3. Otherwise, follow these steps:
+
+Download MacPorts for your Mac OS X version from the MacPorts downloads site. MacPorts requires the installation of Xcode.
+Install MacPorts according to the documentation.
+Update MacPorts:
+
+ sudo port selfupdate
+Install libwebp:
+
+ sudo port install webp
+Step 4 will install any dependencies, including the JPEG, PNG and TIFF libraries.
+
+Note: Although the MacPorts repository is quick to add new WebP releases, their version may be out-of-date for a short while after each official WebP release.
+
+What Next?
